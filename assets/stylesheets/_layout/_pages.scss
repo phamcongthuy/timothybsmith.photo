@@ -1,0 +1,26 @@
+// -------------------------------
+// PAGES
+// -------------------------------
+
+.page {
+  // margin-top: 3rem;
+  > * {
+    width: 575px;
+  }
+
+  > ul {
+    list-style: square;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  li + li {
+    margin-top: .3rem;
+  }
+}
+
+.page__description {
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  line-height: 1.25;
+}

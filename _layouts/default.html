@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- include head.html -->
+  {% include head.html %}
 
-<body {% if page.css_class or layout.css_class %}class="{{ page.css_class }}{{ layout.css_class }}"{% endif %}>
+  <body {% if page.css_class or layout.css_class %}class="{{ page.css_class }}{{ layout.css_class }}"{% endif %}>
 
-  <!-- include header.html -->
+    {% include header.html %}
 
-  <main class="main" role="main">
-    {{ content }}
-  </main>
+    <main class="main" role="main">
+      {{ content }}
+    </main>
 
-  <!-- include footer.html -->
-  
-</body>
+    <!-- include footer.html -->
+
+    {% unless page.url == '/contact/' %}
+    <!-- Masonry -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+    <script>
+      var grid = document.querySelector('.photo-grid');
+      var msnry;
+
+      imagesLoaded(grid, function () {
+        // init Isotope after all images have loaded
+        msnry = new Masonry(grid, {
+          itemSelector: '.photo-grid__item',
+          columnWidth: '.photo-grid__item--size',
+          percentPosition: true
+        });
+      });
+    </script>
+    {% endunless %}
+  </body>
 </html>

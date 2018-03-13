@@ -1,0 +1,33 @@
+// -------------------------------
+// MAIN CONTENT
+// -------------------------------
+
+.photo-grid {
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+.photo-grid__item {
+  float: left;
+  padding: 3px;
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.photo-grid__item--size,
+.photo-grid__item {
+  width: 100%;
+
+  @media #{$medium-up} {
+    width: 33.333333333%;
+  }
+
+  @media #{$xlarge-up} {
+    width: 25%;
+  }
+}
