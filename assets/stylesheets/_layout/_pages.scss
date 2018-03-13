@@ -3,9 +3,8 @@
 // -------------------------------
 
 .page {
-  // margin-top: 3rem;
   > * {
-    width: 575px;
+    max-width: 575px;
   }
 
   > ul {
