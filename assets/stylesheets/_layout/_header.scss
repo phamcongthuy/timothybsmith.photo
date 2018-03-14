@@ -6,20 +6,11 @@
   margin-bottom: 2rem;
 }
 
-.header__logo {
-  display: inline-block;
-  margin-bottom: .8rem;
-  svg {
-    animation-duration: 90s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-name: logoColors;
-    fill: $primary-color;
-    width: 110px;
-  }
-}
-
 @keyframes logoColors {
+  from {
+    fill: $primary-color;
+  }
+
   25% {
     fill: #F30D4C;
   }
@@ -32,8 +23,21 @@
     fill: #FA6978;
   }
 
-  100% {
+  to {
     fill: #F88962;
+  }
+}
+
+.header__logo {
+  display: inline-block;
+  margin-bottom: .8rem;
+  svg {
+    animation-duration: 90s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: logoColors;
+    fill: $primary-color;
+    width: 110px;
   }
 }
 

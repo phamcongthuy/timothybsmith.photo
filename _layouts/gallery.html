@@ -4,7 +4,7 @@ layout: default
 
 <div class="photo-grid">
   <div class="photo-grid__item--size"></div>
-{% for image in site.static_files %}
+{% for image in site.static_files reversed %}
   {% if image.path contains page.gallery %}
     <div class="photo-grid__item">
       <img class="pg-item__image" src="{{ site.baseurl }}/images/{{ page.gallery }}/{{ image.name }}" alt="{{ image.name }}">
