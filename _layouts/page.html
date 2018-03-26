@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
+{% if page.profile %}
+  <picture>
+    <source srcset="/images/contact/tim-4x5.jpg" media="(min-width: 40em)">
+    <img src="/images/contact/tim-16x9.jpg" alt="Picture of Tim Smith" class="page__image">
+  </picture>
+{% endif %}
 
 <div class="page">
 

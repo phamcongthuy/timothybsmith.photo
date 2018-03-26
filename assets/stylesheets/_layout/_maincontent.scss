@@ -2,6 +2,27 @@
 // MAIN CONTENT
 // -------------------------------
 
+.main--grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas: 'image'
+  'content';
+  @media #{$medium-up} {
+    grid-gap: 2rem;
+    grid-template-areas: 'content image';
+    grid-template-columns: minmax(300px, 575px) minmax(330px, 450px);
+  }
+
+  .page {
+    grid-area: content;
+  }
+
+  .page__image {
+    grid-area: image;
+    max-width: 100%;
+  }
+}
+
 .photo-grid {
   &:after {
     clear: both;

@@ -3,6 +3,7 @@ layout: page
 title: Tim Smith Is Available for Contact
 permalink: /contact/
 description: The best way to get in touch with me is to send an email to <a href="mailto:smith@ttimsmith.com?subject=I need a photographer!">smith@ttimsmith.com</a>
+profile: true
 ---
 
 I'm a portrait and wedding photographer living in Saint Paul, MN with my beautiful and amazing wife, Kelly. My interest in photography and videography started a few years ago. I love capturing the emotion of people.
